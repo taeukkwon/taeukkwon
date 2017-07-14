@@ -1,0 +1,24 @@
+
+<section id="posts_index">
+<% @posts.each do |p| %>
+
+         <div class="wrapper">
+          <div class="pf">
+             <a href="/posts/show/<%= p.id %>"><img src="<%= p.avatar.url %>" ></a>
+        </div>
+           <h3 class="category"><%= p.category %></h3>
+           <h3 class="name"><%= p.title %></h3>
+         </div>
+
+
+<% end %>
+</section>
+
+
+
+
+
+
+
+
+
