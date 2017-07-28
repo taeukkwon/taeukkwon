@@ -1,2 +1,16 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+
+<div class="container">
+
+<form enctype="multipart/form-data" action="/posts/create" accept-charset="UTF-8" method="post">
+
+    <label>분류</label> <br> <input name='input_category' class="category" cols="50" type='text' value='<%= @post.category %>'><br>
+    <label>제목</label> <br> <input name='input_title' class="title" cols="50" type='text' value='<%= @post.title %>'><br>
+    <label>내용</label> <br> <textarea name='input_content' class="content tinymce" value='<%= @post.title %>'></textarea><br>
+    <label>파일 첨부</label> <br> <input name='avatar' class="file" type='file' value='<%= @post.avatar %>'>
+
+    <button type="submit">작성하기</button>
+</form>
+
+</div>
+
+

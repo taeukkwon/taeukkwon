@@ -13,13 +13,17 @@ class PostsController < ApplicationController
     @new_post.avatar = params[:avatar]
     end
     
+    
+    
     @new_post.save
     
     redirect_to "/posts/show/#{@new_post.id}"
   end
 
   def show
+    @posts = Post.all
     @post = Post.find(params[:id])
+    
   end
 
   def index
@@ -27,11 +31,16 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to '/posts/index'
   end
 
   def update
+    
   end
 end

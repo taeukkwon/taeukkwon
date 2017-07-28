@@ -15,6 +15,10 @@
 //= require turbolinks
 //= require_tree .
 
+//= require tinymce
+//= require tinymce-jquery
+
+
 var ready = function() {
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();

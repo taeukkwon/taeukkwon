@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'posts/new'
 
   get 'posts/create'
@@ -9,6 +10,11 @@ Rails.application.routes.draw do
 
   get 'posts/index'
   get 'posts/show/:id' => 'posts#show'
+  
+  delete 'posts/destroy/:id' => 'posts#destroy'
+  
+  get 'posts/edit/:id' => 'posts#edit'
+  post 'posts/update/:id' => 'posts#update'
 
   get 'posts/edit'
 

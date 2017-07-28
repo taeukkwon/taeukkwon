@@ -13,7 +13,7 @@
         <hr>
     
         <div class="post_content">
-        <%= @post.content %>
+        <%= @post.content.html_safe %>
         </div>
     
     
@@ -24,6 +24,9 @@
         <% end %>
         
         </div>
+        
+        <a href="/posts/edit/<%=@post.id %>"> 수정하기</a>
+        <a href="/posts/destroy/<%= @post.id %>" data-confirm="삭제 하시겠습니까?" data-method="delete"> 삭제하기</a>
     
     </div>
 
